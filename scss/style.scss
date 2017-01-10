@@ -1,7 +1,7 @@
 @import 'grid';
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .top-banner {
@@ -27,19 +27,39 @@ body {
 .make-things {
 	background: #fafafa;
 	.category {
-		padding: 60px 0 20px 0;
-	}
-	.tags{
-		background: linear-gradient(to right, blue, pink);
-		padding: 10px 30px;
-		color: #fff;
-		border-radius: 20px;
-		cursor: pointer;
+		padding: 60px 0 1.2em 0;
+		border-bottom: 1px solid #d0d0d0;
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			li {
+				display: inline;
+				.active-tag {
+					color: #353535;
+					border-bottom: 4px solid #353535;
+					font-weight: 700;
+					box-sizing: border-box;
+				}
+				a {
+					padding: 1em;
+					text-decoration: none;
+					font-weight: 400;
+					color: #9c9c9c;
+					border-right: 1px solid #d0d0d0;
+				}
+			}
+		}
 	}
 	.your-creation {
 		margin-top: 70px;
 		margin-bottom: 20px;
-		padding: 10px 15px;
+		.last-in-row:nth-of-type(3n) {
+      padding-right: 0;
+		}
+    .first-in-row:nth-of-type(3n+1) {
+      padding-left: 0;
+    }
 		.head {
 			display: flex;
 			justify-content: center;
@@ -51,7 +71,6 @@ body {
 				border-radius: 50%;
 			}
 			h1 {
-				font-family: 'Roboto', sans-serif;
 				font-weight: normal;
 				color: #444;
 				margin-left: 10px;
